@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Greeting Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div id="controls">
+        <h2>Create Your Greeting Card</h2>
+        <textarea id="messageInput" placeholder="Enter your message here..." rows="4" cols="50"></textarea><br>
+
+        <label for="fontSelect">Select Font:</label>
+        <select id="fontSelect">
+            <option value="'Arial', sans-serif">Arial</option>
+            <option value="'Courier New', monospace">Courier New</option>
+            <option value="'Georgia', serif">Georgia</option>
+        </select>
+
+        <label for="fontSizeSelect">Select Font Size:</label>
+        <select id="fontSizeSelect">
+            <option value="16px">Small</option>
+            <option value="20px">Medium</option>
+            <option value="24px">Large</option>
+            <option value="30px">Extra Large</option>
+        </select>
+
+        <label for="colorSelect">Select Text Color:</label>
+        <input type="color" id="colorSelect" value="#000000"><br>
+
+        <label for="backgroundColorSelect">Select Background Color:</label>
+        <input type="color" id="backgroundColorSelect" value="#ffffff"><br>
+
+        <label for="textAlignment">Text Alignment:</label>
+        <select id="textAlignment">
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+        </select><br>
+
+        <label for="imagePosition">Image Position:</label>
+        <select id="imagePosition">
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+        </select><br>
+
+        <label for="borderStyle">Border Style:</label>
+        <select id="borderStyle">
+            <option value="none">None</option>
+            <option value="solid">Solid</option>
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+        </select>
+        <input type="color" id="borderColor" value="#000000"><br>
+
+        <label for="textShadow">Add Text Shadow:</label>
+        <input type="checkbox" id="textShadow"><br>
+
+        <label for="imageUpload">Upload Image:</label>
+        <input type="file" id="imageUpload" accept="image/*"><br>
+
+        <label for="stickersSelect">Select Sticker:</label>
+        <select id="stickersSelect">
+            <option value="">None</option>
+            <option value="heartsticker">Heart</option>
+            <option value="starsticker">Star</option>
+            <option value="smilesticker">Smile</option>
+        </select><br>
+
+        <button id="generateCard">Generate Card</button>
+        <button id="resetCard">Reset Card</button>
+    </div>
+
+    <div id="greetingCard" style="display: none;">
+        <div id="cardMessage">Your Message Here!</div>
+        <div id="imageContainer"></div>
+        <div id="stickerContainer"></div>
+        <button id="goBack">Go Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html
